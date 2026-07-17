@@ -1,0 +1,6 @@
+name: demo
+registry: docker.io
+repository: nginx
+port: 80
+baseEnv:
+  PORT: "80"
