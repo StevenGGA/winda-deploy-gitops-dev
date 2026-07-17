@@ -1,0 +1,6 @@
+name: manbo
+registry: gchr.io
+repository: stevengga/steven-hello
+port: 8080
+baseEnv:
+  PORT: "8080"
