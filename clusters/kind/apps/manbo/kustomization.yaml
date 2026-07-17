@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: dev
 resources:
   - deployments/v1.yaml
+  - routes/main.yaml

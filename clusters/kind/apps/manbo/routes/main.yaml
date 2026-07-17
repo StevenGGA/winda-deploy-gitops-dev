@@ -1,0 +1,13 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: manbo-main
+spec:
+  parentRefs:
+    - { name: main-gateway, namespace: winda-deploy }
+  hostnames: ["manbo.dev.localtest.me"]
+  rules:
+    - matches:
+        - path: { type: PathPrefix, value: / }
+      backendRefs:
+        - { name: manbo-v1, port: 80, weight: 100 }
