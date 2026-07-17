@@ -1,0 +1,9 @@
+# env → cluster map for LOCAL dev. One cluster: your local kind cluster, backing
+# env=dev, read in-cluster (no apiServer/token → the api uses its kubeconfig).
+# baseDomain uses localtest.me / *.localtest.me which resolves to 127.0.0.1.
+clusters:
+  - name: kind
+    env: dev
+    default: true
+    appsPath: clusters/kind/apps
+    baseDomain: localtest.me
