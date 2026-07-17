@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: manbo
-          image: gchr.io/stevengga/steven-hello:latest
+          image: ghcr.io/stevengga/steven-hello:latest
           ports:
             - containerPort: 8080
           env:
