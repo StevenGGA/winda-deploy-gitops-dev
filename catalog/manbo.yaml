@@ -1,5 +1,5 @@
 name: manbo
-registry: gchr.io
+registry: ghcr.io
 repository: stevengga/steven-hello
 port: 8080
 baseEnv:
