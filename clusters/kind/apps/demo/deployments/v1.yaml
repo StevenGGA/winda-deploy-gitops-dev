@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: demo-v1
-  labels: { app: demo, deployment: v1 }
+  labels: { app: "demo", deployment: "v1" }
 spec:
   replicas: 1
   selector:
-    matchLabels: { app: demo, deployment: v1 }
+    matchLabels: { app: "demo", deployment: "v1" }
   template:
     metadata:
-      labels: { app: demo, deployment: v1 }
+      labels: { app: "demo", deployment: "v1" }
     spec:
       containers:
         - name: demo
@@ -28,7 +28,7 @@ kind: Service
 metadata:
   name: demo-v1
 spec:
-  selector: { app: demo, deployment: v1 }
+  selector: { app: "demo", deployment: "v1" }
   ports:
     - port: 80
       targetPort: 80
