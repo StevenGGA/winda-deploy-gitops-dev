@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: typo-test-v1
+  labels: { app: typo-test, deployment: v1 }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: typo-test, deployment: v1 }
+  template:
+    metadata:
+      labels: { app: typo-test, deployment: v1 }
+    spec:
+      containers:
+        - name: typo-test
+          image: gchr.io/stevengga/steven-hellp:0.9.21
+          ports:
+            - containerPort: 80
+          env:
+            - { name: DEPLOYMENT, value: "v1" }
+            - { name: PORT, value: "80" }
+          resources:
+            requests: { cpu: 100m, memory: 128Mi }
+            limits: { cpu: 500m, memory: 512Mi }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: typo-test-v1
+spec:
+  selector: { app: typo-test, deployment: v1 }
+  ports:
+    - port: 80
+      targetPort: 80
