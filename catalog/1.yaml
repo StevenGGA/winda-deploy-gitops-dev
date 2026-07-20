@@ -1,0 +1,6 @@
+name: 1
+registry: docker.io
+repository: ealen/echo-server
+port: 80
+baseEnv:
+  PORT: "80"
