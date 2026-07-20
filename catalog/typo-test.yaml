@@ -1,6 +1,0 @@
-name: typo-test
-registry: gchr.io
-repository: stevengga/steven-hellp
-port: 80
-baseEnv:
-  PORT: "80"
