@@ -10,4 +10,4 @@ spec:
     - matches:
         - path: { type: PathPrefix, value: / }
       backendRefs:
-        - { name: demo-1, port: 80, weight: 100 }
+        - { name: demo-v1, port: 80, weight: 100 }
