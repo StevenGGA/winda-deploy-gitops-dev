@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: dev
+namespace: "dev"
 resources:
-  - deployments/v1.yaml
-  - routes/main.yaml
+  - "deployments/v1.yaml"
+  - "routes/main.yaml"
+  - "static-deployments/s3-ms3p2oy8.yaml"
