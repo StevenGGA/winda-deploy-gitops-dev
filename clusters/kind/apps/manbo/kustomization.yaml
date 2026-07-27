@@ -4,4 +4,4 @@ namespace: "dev"
 resources:
   - "deployments/v1.yaml"
   - "routes/main.yaml"
-  - "static-deployments/s3-ms3rkttj.yaml"
+  - "static-deployments/s3-ms3rssz9.yaml"
