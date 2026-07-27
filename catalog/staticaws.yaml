@@ -1,0 +1,4 @@
+name: "staticaws"
+registry: "kind.local"
+repository: "winda/static-demo"
+port: 80
