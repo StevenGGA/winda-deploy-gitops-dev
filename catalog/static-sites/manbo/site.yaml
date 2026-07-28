@@ -1,0 +1,4 @@
+name: "site"
+app: "manbo"
+envs:
+  dev: { bucket: "winda-static-dev", region: "us-east-2" }
