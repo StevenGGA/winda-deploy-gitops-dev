@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "staticdemo-v1"
+  labels: { app: "staticdemo", deployment: "v1" }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: "staticdemo", deployment: "v1" }
+  template:
+    metadata:
+      labels: { app: "staticdemo", deployment: "v1" }
+    spec:
+      containers:
+        - name: "staticdemo"
+          image: "kind.local/winda/static-demo:latest"
+          ports:
+            - containerPort: 80
+          env:
+            - { name: "DEPLOYMENT", value: "v1" }
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "staticdemo-v1"
+spec:
+  selector: { app: "staticdemo", deployment: "v1" }
+  ports:
+    - port: 80
+      targetPort: 80
