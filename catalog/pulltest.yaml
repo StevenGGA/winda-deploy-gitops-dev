@@ -1,0 +1,9 @@
+name: "pulltest"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+port: 8080
+staticSourceDir: "/usr/share/nginx/html"
+staticSPA: true
+staticImagePullSecrets:
+  - "ghcr-pull"
+  - "other-pull"
