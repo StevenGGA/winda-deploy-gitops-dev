@@ -6,4 +6,4 @@ resources:
   - "routes/main.yaml"
   - "routes/mimetest.yaml"
   - "routes/web.yaml"
-  - "static-deployments/web/s3-0ms5776as003v2ny.yaml"
+  - "static-deployments/web/s3-0ms57ae2t004x6a7.yaml"
