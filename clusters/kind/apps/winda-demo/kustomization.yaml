@@ -4,4 +4,4 @@ namespace: "dev"
 resources:
   - "routes/mimetest.yaml"
   - "routes/web.yaml"
-  - "static-deployments/web/s3-0ms55ebhm001lulk.yaml"
+  - "static-deployments/web/s3-0ms56dp28001db98.yaml"
