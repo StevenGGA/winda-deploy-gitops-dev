@@ -3,6 +3,7 @@ kind: Kustomization
 namespace: "dev"
 resources:
   - "deployments/v1.yaml"
+  - "routes/main.yaml"
   - "routes/mimetest.yaml"
   - "routes/web.yaml"
   - "static-deployments/web/s3-0ms56dp28001db98.yaml"
