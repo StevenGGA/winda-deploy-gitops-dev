@@ -5,3 +5,4 @@ resources:
   - "deployments/v1.yaml"
   - "routes/main.yaml"
   - "static-deployments/s3-ms3rui4w.yaml"
+  - "static-deployments/site/s3-0ms5769iw002u9vc.yaml"
