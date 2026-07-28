@@ -16,6 +16,6 @@ spec:
             set:
               - { name: "X-Winda-Static-Bucket", value: "winda-static-dev" }
               - { name: "X-Winda-Static-Prefix", value: "winda-demo/web" }
-              - { name: "X-Winda-Static-Mode", value: "spa" }
+              - { name: "X-Winda-Static-Mode", value: "docs" }
       backendRefs:
         - { name: "static-proxy", namespace: "winda-deploy", port: 8080 }
