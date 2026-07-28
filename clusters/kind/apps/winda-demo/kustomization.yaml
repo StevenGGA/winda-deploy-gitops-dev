@@ -1,8 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+namespace: "dev"
 resources:
-  - "demo"
-  - "manbo"
-  - "staticaws"
-  - "staticdemo"
-  - "winda-demo"
+  - "static-deployments/web/s3-0ms4x2kf9001q5q6.yaml"
