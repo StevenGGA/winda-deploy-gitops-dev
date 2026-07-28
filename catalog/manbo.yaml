@@ -1,6 +1,8 @@
-name: manbo
-registry: ghcr.io
-repository: stevengga/steven-hello
+name: "manbo"
+registry: "ghcr.io"
+repository: "stevengga/steven-hello"
 port: 8080
+staticSourceDir: "/site"
+staticSPA: true
 baseEnv:
-  PORT: "8080"
+  "PORT": "8080"
