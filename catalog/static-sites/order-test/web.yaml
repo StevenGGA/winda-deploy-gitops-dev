@@ -1,0 +1,4 @@
+name: "web"
+app: "order-test"
+envs:
+  dev: { bucket: "winda-static-dev", region: "us-east-2" }
