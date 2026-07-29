@@ -5,4 +5,5 @@ resources:
   - "manbo"
   - "staticaws"
   - "staticdemo"
+  - "uploadtest"
   - "winda-demo"
