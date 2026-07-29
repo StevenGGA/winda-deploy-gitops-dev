@@ -13,11 +13,12 @@ spec:
     spec:
       containers:
         - name: "staticdemo"
-          image: "kind.local/winda/static-demo:latest"
+          image: "ghcr.io/stevengga/winda-static-demo:latest"
           ports:
             - containerPort: 80
           env:
             - { name: "DEPLOYMENT", value: "v1" }
+            - { name: "PORT", value: "80" }
           resources:
             requests: { cpu: "100m", memory: "128Mi" }
             limits: { cpu: "500m", memory: "512Mi" }
