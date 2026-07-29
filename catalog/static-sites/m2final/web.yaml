@@ -1,0 +1,4 @@
+name: "web"
+app: "m2final"
+envs:
+  dev: { bucket: "winda-static-dev" }
