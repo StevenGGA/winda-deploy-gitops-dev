@@ -1,5 +1,0 @@
-name: "m2check"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-port: 8080
-staticSourceDir: "/usr/share/nginx/html"

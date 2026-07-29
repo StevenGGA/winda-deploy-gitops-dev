@@ -1,4 +1,0 @@
-name: "web"
-app: "m2check"
-envs:
-  dev: { bucket: "winda-static-dev" }
