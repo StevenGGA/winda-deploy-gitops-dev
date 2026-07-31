@@ -1,4 +1,0 @@
-name: "web"
-app: "winda-demo"
-envs:
-  dev: { bucket: "winda-static-dev", region: "us-east-2" }

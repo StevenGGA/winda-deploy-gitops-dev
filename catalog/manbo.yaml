@@ -3,7 +3,5 @@ kind: "container"
 registry: "ghcr.io"
 repository: "stevengga/steven-hello"
 port: 8080
-staticSourceDir: "/site"
-staticSPA: true
 baseEnv:
   "PORT": "8080"

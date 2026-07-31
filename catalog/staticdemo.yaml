@@ -1,7 +1,0 @@
-name: "staticdemo"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-port: 80
-staticSourceDir: "/usr/share/nginx/html"
-baseEnv:
-  "PORT": "80"

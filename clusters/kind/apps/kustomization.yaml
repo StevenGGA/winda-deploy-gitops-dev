@@ -3,7 +3,3 @@ kind: Kustomization
 resources:
   - "demo"
   - "manbo"
-  - "staticaws"
-  - "staticdemo"
-  - "uploadtest"
-  - "winda-demo"
