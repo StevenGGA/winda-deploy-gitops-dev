@@ -1,0 +1,5 @@
+name: "static-test"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+staticSourceDir: "/usr/share/nginx/html"
