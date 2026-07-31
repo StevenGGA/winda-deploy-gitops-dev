@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - "demo"
   - "manbo"
+  - "sitedemo"
   - "static-test"
   - "staticbad"
   - "staticsite"
