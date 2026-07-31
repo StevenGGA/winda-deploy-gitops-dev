@@ -1,0 +1,5 @@
+name: "staticbad"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+staticSourceDir: "/does-not-exist"
