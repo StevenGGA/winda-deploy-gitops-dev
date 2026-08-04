@@ -1,13 +1,13 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: delfail-web-rm-bb8cae4616
+    name: delfail-web-rm-d565ed3718
     labels:
         app: delfail
         winda.ai/workload: static-cleanup
     annotations:
         winda.ai/bucket: winda-deploy-static-local-dev
-        winda.ai/cleanup-attempt: "1"
+        winda.ai/cleanup-attempt: "2"
         winda.ai/cleanup-scope: deployment
         winda.ai/prefix: delfail/web/
         winda.ai/region: us-east-2
