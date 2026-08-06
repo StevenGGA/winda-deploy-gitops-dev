@@ -1,6 +1,0 @@
-name: "static-e2e-08062147"
-kind: "static"
-registry: "registry-1.docker.io"
-repository: "library/nginx"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
