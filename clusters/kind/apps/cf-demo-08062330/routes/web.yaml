@@ -1,0 +1,31 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+    name: cf-demo-08062330-web
+    labels:
+        app: cf-demo-08062330
+        winda.ai/workload: static-route
+    annotations:
+        winda.ai/static-deployment: main
+spec:
+    parentRefs:
+        - name: main-gateway
+          namespace: winda-deploy
+    hostnames:
+        - cf-demo-08062330.dev.localtest.me
+    rules:
+        - matches:
+            - path:
+                type: PathPrefix
+                value: /
+          filters:
+            - type: RequestHeaderModifier
+              requestHeaderModifier:
+                set:
+                    - name: X-Winda-Static-Prefix
+                      value: cf-demo-08062330/main/
+                    - name: X-Winda-Static-Index-Document
+                      value: index.html
+          backendRefs:
+            - name: static-proxy
+              port: 8080
