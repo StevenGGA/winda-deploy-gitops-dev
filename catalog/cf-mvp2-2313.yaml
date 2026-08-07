@@ -1,6 +1,0 @@
-name: "cf-mvp2-2313"
-kind: "static"
-registry: "registry-1.docker.io"
-repository: "library/nginx"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
