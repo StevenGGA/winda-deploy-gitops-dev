@@ -2,7 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - "cf-demo-08062330"
-  - "cf-mvp-08072309"
   - "cf-mvp2-2313"
   - "demo"
   - "manbo"
