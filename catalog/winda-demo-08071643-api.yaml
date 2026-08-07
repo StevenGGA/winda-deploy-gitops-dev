@@ -1,0 +1,5 @@
+name: "winda-demo-08071643-api"
+kind: "container"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+port: 8080
