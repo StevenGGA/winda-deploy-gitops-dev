@@ -1,0 +1,13 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: "winda-demo-08071643-api-api"
+spec:
+  parentRefs:
+    - { name: main-gateway, namespace: winda-deploy }
+  hostnames: ["winda-demo-08071643.dev.localtest.me"]
+  rules:
+    - matches:
+        - path: { type: PathPrefix, value: "/api" }
+      backendRefs:
+        - { name: "winda-demo-08071643-api-v1", port: 80, weight: 100 }
