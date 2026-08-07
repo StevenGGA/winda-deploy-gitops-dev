@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "winda-demo-08071643-api-v1"
+  labels: { app: "winda-demo-08071643-api", deployment: "v1" }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: "winda-demo-08071643-api", deployment: "v1" }
+  template:
+    metadata:
+      labels: { app: "winda-demo-08071643-api", deployment: "v1" }
+    spec:
+      containers:
+        - name: "winda-demo-08071643-api"
+          image: "ghcr.io/stevengga/winda-static-demo:sha-b86593d"
+          ports:
+            - containerPort: 8080
+          env:
+            - { name: "DEPLOYMENT", value: "v1" }
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "winda-demo-08071643-api-v1"
+spec:
+  selector: { app: "winda-demo-08071643-api", deployment: "v1" }
+  ports:
+    - port: 80
+      targetPort: 8080
