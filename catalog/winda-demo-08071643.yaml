@@ -1,0 +1,6 @@
+name: "winda-demo-08071643"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+staticSourceDir: "/usr/share/nginx/html"
+indexDocument: "index.html"
