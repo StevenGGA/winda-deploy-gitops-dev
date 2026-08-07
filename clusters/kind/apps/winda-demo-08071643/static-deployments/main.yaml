@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: winda-demo-08071643-main-771d439d14
+    name: winda-demo-08071643-main-98f3b45cb4
     labels:
         app: winda-demo-08071643
         deployment: main
@@ -10,7 +10,7 @@ metadata:
         winda.ai/bucket: winda-deploy-static-local-dev
         winda.ai/prefix: winda-demo-08071643/main/
         winda.ai/region: us-east-2
-        winda.ai/tag: sha-b86593d
+        winda.ai/tag: sha-5a1c2d5
 spec:
     backoffLimit: 2
     activeDeadlineSeconds: 900
@@ -28,7 +28,7 @@ spec:
                   command:
                     - /static-extractor
                   args:
-                    - ghcr.io/stevengga/winda-static-demo:sha-b86593d
+                    - ghcr.io/stevengga/winda-static-demo:sha-5a1c2d5
                     - /usr/share/nginx/html
                     - /publish
                   volumeMounts:
