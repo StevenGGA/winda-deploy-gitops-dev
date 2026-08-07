@@ -12,7 +12,7 @@ spec:
         - name: main-gateway
           namespace: winda-deploy
     hostnames:
-        - winda-demo-08071643.dev.localtest.me
+        - winda-demo-08071643.static-dev.winda.ai
     rules:
         - matches:
             - path:
