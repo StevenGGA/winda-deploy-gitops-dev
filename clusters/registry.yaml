@@ -21,5 +21,5 @@ clusters:
       # bare distribution domain until per-site DNS exists.
       cdn:
         kvsArn: "arn:aws:cloudfront::304035490047:key-value-store/e4ae5e8f-f691-49a1-ab52-67f3d6f6c818"
-        domain: "dfw975oa0s071.cloudfront.net"
-        rootRoute: "winda-demo-08071643/web"
+        domain: "static-dev.winda.ai"
+        distributionId: "EWYGXBFB9HU77"
