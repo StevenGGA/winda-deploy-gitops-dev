@@ -4,3 +4,4 @@ namespace: "dev"
 resources:
   - "routes/public.yaml"
   - "static-deployments/slot-a.yaml"
+  - "static-deployments/slot-b.yaml"
