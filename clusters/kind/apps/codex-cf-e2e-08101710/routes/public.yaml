@@ -1,0 +1,31 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+    name: codex-cf-e2e-08101710-public
+    labels:
+        app: codex-cf-e2e-08101710
+        winda.ai/workload: static-route
+    annotations:
+        winda.ai/static-deployment: slot-b
+spec:
+    parentRefs:
+        - name: main-gateway
+          namespace: winda-deploy
+    hostnames:
+        - codex-cf-e2e-08101710.static-dev.winda.ai
+    rules:
+        - matches:
+            - path:
+                type: PathPrefix
+                value: /
+          filters:
+            - type: RequestHeaderModifier
+              requestHeaderModifier:
+                set:
+                    - name: X-Winda-Static-Prefix
+                      value: codex-cf-e2e-08101710/slot-b/
+                    - name: X-Winda-Static-Index-Document
+                      value: index.html
+          backendRefs:
+            - name: static-proxy
+              port: 8080
