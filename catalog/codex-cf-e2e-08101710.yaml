@@ -1,6 +1,0 @@
-name: "codex-cf-e2e-08101710"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
