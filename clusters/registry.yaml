@@ -14,7 +14,10 @@ clusters:
     staticStorage:
       bucket: "winda-deploy-static-local-dev"
       region: "us-east-2"
-      credentialsSecret: "winda-static-s3"
+      # Upload jobs use a dedicated write credential. The existing
+      # winda-static-s3 Secret remains available to the read path while that
+      # path is split independently.
+      uploadCredentialsSecret: "winda-static-s3-upload"
       extractorImage: "winda-deploy-api:localdev"
       uploaderImage: "public.ecr.aws/aws-cli/aws-cli:2.27.41@sha256:1c2d7a51b1ff4f460bc3f1e1ee46a6cef47c7429ad9089ef99012a95e472a1a5"
       # Edge delivery (CloudFront). rootRoute names the route that owns the

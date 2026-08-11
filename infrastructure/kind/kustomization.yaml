@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - namespaces.yaml
   - winda-static-s3-externalsecret.yaml
+  - winda-static-s3-upload-externalsecret.yaml
