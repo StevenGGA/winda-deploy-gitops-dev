@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: pr3-cf-08131344-cf-slot-b-0abe569c16
+    name: pr3-cf-08131344-cf-slot-b-9c0a4e2699
     labels:
         app: pr3-cf-08131344-cf
         deployment: slot-b
@@ -10,7 +10,7 @@ metadata:
         winda.ai/bucket: winda-deploy-static-local-dev
         winda.ai/prefix: pr3-cf-08131344-cf/slot-b/
         winda.ai/region: us-east-2
-        winda.ai/tag: latest
+        winda.ai/tag: sha-b86593d
 spec:
     backoffLimit: 2
     activeDeadlineSeconds: 900
@@ -28,7 +28,7 @@ spec:
                   command:
                     - /static-extractor
                   args:
-                    - ghcr.io/stevengga/winda-static-demo:latest
+                    - ghcr.io/stevengga/winda-static-demo:sha-b86593d
                     - /usr/share/nginx/html
                     - /publish
                   volumeMounts:
