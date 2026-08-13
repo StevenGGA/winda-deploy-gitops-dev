@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-    name: sitedemo-web-f4a37f4b8b
+    name: sitedemo-web-b9b9adc3ea
     labels:
         app: sitedemo
         deployment: web
@@ -49,7 +49,7 @@ spec:
                     - --only-show-errors
                   envFrom:
                     - secretRef:
-                        name: winda-static-s3
+                        name: winda-static-s3-upload
                   volumeMounts:
                     - name: publish
                       mountPath: /publish
