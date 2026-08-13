@@ -3,3 +3,4 @@ kind: Kustomization
 namespace: "dev"
 resources:
   - "static-deployments/slot-a.yaml"
+  - "static-deployments/slot-b.yaml"
