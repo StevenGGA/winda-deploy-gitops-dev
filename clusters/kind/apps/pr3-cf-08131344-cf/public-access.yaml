@@ -4,4 +4,4 @@ metadata:
     name: public
 spec:
     env: dev
-    deployment: slot-a
+    deployment: slot-b
