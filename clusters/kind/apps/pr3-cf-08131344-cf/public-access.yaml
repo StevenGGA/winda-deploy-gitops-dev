@@ -1,0 +1,7 @@
+apiVersion: winda.ai/v1alpha1
+kind: StaticPublicAccess
+metadata:
+    name: public
+spec:
+    env: dev
+    deployment: slot-a
