@@ -1,6 +1,0 @@
-name: "pr3-cf-08131344-cf"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
