@@ -1,6 +1,0 @@
-name: "zqa1"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
