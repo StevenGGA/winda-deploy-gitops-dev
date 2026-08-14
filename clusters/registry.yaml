@@ -19,9 +19,3 @@ clusters:
       region: "us-east-2"
       extractorImage: "winda-deploy-api:localdev"
       uploaderImage: "public.ecr.aws/aws-cli/aws-cli:2.27.41@sha256:1c2d7a51b1ff4f460bc3f1e1ee46a6cef47c7429ad9089ef99012a95e472a1a5"
-      # Edge delivery (CloudFront). rootRoute names the route that owns the
-      # bare distribution domain until per-site DNS exists.
-      cdn:
-        kvsArn: "arn:aws:cloudfront::304035490047:key-value-store/e4ae5e8f-f691-49a1-ab52-67f3d6f6c818"
-        domain: "static-dev.winda.ai"
-        distributionId: "EWYGXBFB9HU77"
