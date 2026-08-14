@@ -1,6 +1,0 @@
-name: "pr4-e2e-08141920"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
