@@ -10,7 +10,7 @@ metadata:
         winda.ai/bucket: winda-deploy-static-local-dev
         winda.ai/cleanup-attempt: "1"
         winda.ai/cleanup-scope: deployment
-        winda.ai/cleanup-stage: awaiting-edge
+        winda.ai/cleanup-stage: removing
         winda.ai/prefix: zqa1/web/
         winda.ai/region: us-east-2
         winda.ai/static-deployment: web
