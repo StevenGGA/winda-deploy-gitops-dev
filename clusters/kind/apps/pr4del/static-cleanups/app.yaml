@@ -9,7 +9,7 @@ metadata:
         winda.ai/bucket: winda-deploy-static-local-dev
         winda.ai/cleanup-attempt: "1"
         winda.ai/cleanup-scope: app
-        winda.ai/cleanup-stage: awaiting-edge
+        winda.ai/cleanup-stage: removing
         winda.ai/prefix: pr4del/
         winda.ai/region: us-east-2
 spec:
