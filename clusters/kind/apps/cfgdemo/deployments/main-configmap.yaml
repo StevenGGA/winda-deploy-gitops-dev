@@ -3,6 +3,4 @@ kind: ConfigMap
 metadata:
   name: "cfgdemo-main-env"
   labels: { app: "cfgdemo", deployment: "main" }
-data:
-  "GREETING": "updated-v2"
-  "PORT_HINT": "80"
+data: {}

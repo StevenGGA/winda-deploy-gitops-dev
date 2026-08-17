@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels: { app: "cfgdemo", deployment: "main" }
-      annotations: { winda.deploy/env-checksum: "83cf6f8a2a539cc9" }
+      annotations: { winda.deploy/env-checksum: "e3b0c44298fc1c14" }
     spec:
       containers:
         - name: "cfgdemo"
