@@ -1,0 +1,7 @@
+name: "cfgdemo"
+kind: "container"
+registry: "docker.io"
+repository: "nginx"
+port: 80
+baseEnv:
+  "LEGACY_BASE": "from-baseenv"
