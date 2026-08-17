@@ -4,4 +4,4 @@ metadata:
   name: "verify1-main-env"
   labels: { app: "verify1", deployment: "main" }
 data:
-  "MY_VAR": "steven-was-here"
+  "MY_VAR": "updated"
