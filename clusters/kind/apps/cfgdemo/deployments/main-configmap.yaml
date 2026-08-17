@@ -4,5 +4,5 @@ metadata:
   name: "cfgdemo-main-env"
   labels: { app: "cfgdemo", deployment: "main" }
 data:
-  "GREETING": "hello-configmap"
+  "GREETING": "updated-v2"
   "PORT_HINT": "80"
