@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "cfgdemo-main"
+  labels: { app: "cfgdemo", deployment: "main" }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: "cfgdemo", deployment: "main" }
+  template:
+    metadata:
+      labels: { app: "cfgdemo", deployment: "main" }
+      annotations: { winda.deploy/env-checksum: "7945253c243b164e" }
+    spec:
+      containers:
+        - name: "cfgdemo"
+          image: "docker.io/nginx:1.27-alpine"
+          ports:
+            - containerPort: 80
+          env:
+            - { name: "DEPLOYMENT", value: "main" }
+          envFrom:
+            - configMapRef: { name: "cfgdemo-main-env" }
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "cfgdemo-main"
+spec:
+  selector: { app: "cfgdemo", deployment: "main" }
+  ports:
+    - port: 80
+      targetPort: 80
