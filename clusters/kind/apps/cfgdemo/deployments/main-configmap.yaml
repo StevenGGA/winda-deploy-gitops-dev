@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: "cfgdemo-main-env"
-  labels: { app: "cfgdemo", deployment: "main" }
-data: {}
