@@ -1,0 +1,5 @@
+name: "aa"
+kind: "container"
+registry: "docker.io"
+repository: "nginx"
+port: 8080
