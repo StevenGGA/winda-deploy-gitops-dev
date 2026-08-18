@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "aa-v1-env"
+  labels: { app: "aa", deployment: "v1" }
+data:
+  "KEY": "manbo"
+  "PORT": "8080"

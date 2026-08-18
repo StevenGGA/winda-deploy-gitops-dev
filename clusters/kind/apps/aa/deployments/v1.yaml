@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "aa-v1"
+  labels: { app: "aa", deployment: "v1" }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: "aa", deployment: "v1" }
+  template:
+    metadata:
+      labels: { app: "aa", deployment: "v1" }
+      annotations: { winda.deploy/env-checksum: "e7a414cc16d14be8" }
+    spec:
+      containers:
+        - name: "aa"
+          image: "docker.io/nginx:latest"
+          ports:
+            - containerPort: 8080
+          env:
+            - { name: "DEPLOYMENT", value: "v1" }
+          envFrom:
+            - configMapRef: { name: "aa-v1-env" }
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "aa-v1"
+spec:
+  selector: { app: "aa", deployment: "v1" }
+  ports:
+    - port: 80
+      targetPort: 8080
