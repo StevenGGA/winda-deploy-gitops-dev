@@ -1,34 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: manbo-v1
-  labels: { app: manbo, deployment: v1 }
+  name: "manbo-v1"
+  labels: { app: "manbo", deployment: "v1" }
 spec:
   replicas: 1
   selector:
-    matchLabels: { app: manbo, deployment: v1 }
+    matchLabels: { app: "manbo", deployment: "v1" }
   template:
     metadata:
-      labels: { app: manbo, deployment: v1 }
+      labels: { app: "manbo", deployment: "v1" }
+      annotations: { winda.deploy/env-checksum: "8d3389866d382855" }
     spec:
       containers:
-        - name: manbo
-          image: ghcr.io/stevengga/steven-hello:latest
+        - name: "manbo"
+          image: "ghcr.io/stevengga/steven-hello:latest"
           ports:
             - containerPort: 8080
           env:
-            - { name: DEPLOYMENT, value: "v1" }
-            - { name: PORT, value: "8080" }
+            - { name: "DEPLOYMENT", value: "v1" }
+          envFrom:
+            - configMapRef: { name: "manbo-v1-env" }
           resources:
-            requests: { cpu: 100m, memory: 128Mi }
-            limits: { cpu: 500m, memory: 512Mi }
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: manbo-v1
+  name: "manbo-v1"
 spec:
-  selector: { app: manbo, deployment: v1 }
+  selector: { app: "manbo", deployment: "v1" }
   ports:
     - port: 80
       targetPort: 8080

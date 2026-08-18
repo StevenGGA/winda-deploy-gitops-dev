@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "manbo-v1-env"
+  labels: { app: "manbo", deployment: "v1" }
+data:
+  "PORT": "8080"
