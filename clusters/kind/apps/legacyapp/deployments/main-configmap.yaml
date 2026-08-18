@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "legacyapp-main-env"
+  labels: { app: "legacyapp", deployment: "main" }
+data:
+  "FROM_BASEENV": "legacy-value"
+  "PORT_HINT": "80"

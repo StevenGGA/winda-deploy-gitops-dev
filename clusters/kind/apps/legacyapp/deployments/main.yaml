@@ -10,6 +10,7 @@ spec:
   template:
     metadata:
       labels: { app: "legacyapp", deployment: "main" }
+      annotations: { winda.deploy/env-checksum: "436d99a0b77afa49" }
     spec:
       containers:
         - name: "legacyapp"
@@ -18,8 +19,8 @@ spec:
             - containerPort: 80
           env:
             - { name: "DEPLOYMENT", value: "main" }
-            - { name: "FROM_BASEENV", value: "legacy-value" }
-            - { name: "PORT_HINT", value: "80" }
+          envFrom:
+            - configMapRef: { name: "legacyapp-main-env" }
           resources:
             requests: { cpu: "100m", memory: "128Mi" }
             limits: { cpu: "500m", memory: "512Mi" }
