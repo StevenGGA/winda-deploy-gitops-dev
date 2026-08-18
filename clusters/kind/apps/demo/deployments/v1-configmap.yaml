@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "demo-v1-env"
+  labels: { app: "demo", deployment: "v1" }
+data:
+  "PORT": "80"

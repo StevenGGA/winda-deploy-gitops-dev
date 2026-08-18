@@ -10,6 +10,7 @@ spec:
   template:
     metadata:
       labels: { app: "demo", deployment: "v1" }
+      annotations: { winda.deploy/env-checksum: "324c3733146f66b8" }
     spec:
       containers:
         - name: "demo"
@@ -18,7 +19,8 @@ spec:
             - containerPort: 80
           env:
             - { name: "DEPLOYMENT", value: "v1" }
-            - { name: "PORT", value: "80" }
+          envFrom:
+            - configMapRef: { name: "demo-v1-env" }
           resources:
             requests: { cpu: "100m", memory: "128Mi" }
             limits: { cpu: "500m", memory: "512Mi" }
