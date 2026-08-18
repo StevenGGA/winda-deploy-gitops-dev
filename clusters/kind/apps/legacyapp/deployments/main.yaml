@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "legacyapp-main"
+  labels: { app: "legacyapp", deployment: "main" }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: "legacyapp", deployment: "main" }
+  template:
+    metadata:
+      labels: { app: "legacyapp", deployment: "main" }
+    spec:
+      containers:
+        - name: "legacyapp"
+          image: "docker.io/nginx:1.27-alpine"
+          ports:
+            - containerPort: 80
+          env:
+            - { name: "DEPLOYMENT", value: "main" }
+            - { name: "FROM_BASEENV", value: "legacy-value" }
+            - { name: "PORT_HINT", value: "80" }
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "legacyapp-main"
+spec:
+  selector: { app: "legacyapp", deployment: "main" }
+  ports:
+    - port: 80
+      targetPort: 80

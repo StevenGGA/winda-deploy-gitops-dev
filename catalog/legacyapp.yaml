@@ -1,0 +1,8 @@
+name: "legacyapp"
+kind: "container"
+registry: "docker.io"
+repository: "nginx"
+port: 80
+baseEnv:
+  "FROM_BASEENV": "legacy-value"
+  "PORT_HINT": "80"
