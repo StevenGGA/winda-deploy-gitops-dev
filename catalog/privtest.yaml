@@ -1,0 +1,6 @@
+name: "privtest"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/static-priv-test"
+staticSourceDir: "/usr/share/nginx/html"
+indexDocument: "index.html"
