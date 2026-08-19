@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: "closeout-main-env"
   labels: { app: "closeout", deployment: "main" }
-data: {}
+data:
+  "OK": "yes"

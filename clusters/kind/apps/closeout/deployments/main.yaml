@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels: { app: "closeout", deployment: "main" }
-      annotations: { winda.deploy/env-checksum: "e3b0c44298fc1c14" }
+      annotations: { winda.deploy/env-checksum: "da427aa5d14ee23f" }
     spec:
       containers:
         - name: "closeout"
