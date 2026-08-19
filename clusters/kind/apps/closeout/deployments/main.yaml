@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "closeout-main"
+  labels: { app: "closeout", deployment: "main" }
+spec:
+  replicas: 1
+  selector:
+    matchLabels: { app: "closeout", deployment: "main" }
+  template:
+    metadata:
+      labels: { app: "closeout", deployment: "main" }
+      annotations: { winda.deploy/env-checksum: "e3b0c44298fc1c14" }
+    spec:
+      containers:
+        - name: "closeout"
+          image: "docker.io/nginx:1.27-alpine"
+          ports:
+            - containerPort: 80
+          env:
+            - { name: "DEPLOYMENT", value: "main" }
+          envFrom:
+            - configMapRef: { name: "closeout-main-env" }
+          resources:
+            requests: { cpu: "100m", memory: "128Mi" }
+            limits: { cpu: "500m", memory: "512Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "closeout-main"
+spec:
+  selector: { app: "closeout", deployment: "main" }
+  ports:
+    - port: 80
+      targetPort: 80
