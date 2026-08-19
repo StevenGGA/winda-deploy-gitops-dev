@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: "closeout2-main-env"
-  labels: { app: "closeout2", deployment: "main" }
-data:
-  "OK": "yes"
