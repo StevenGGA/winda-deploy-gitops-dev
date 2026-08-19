@@ -1,5 +1,5 @@
 name: "demo"
 kind: "container"
-registry: "registry: docker.io"
-repository: "repository: nginx"
+registry: "docker.io"
+repository: "nginx"
 port: 80
