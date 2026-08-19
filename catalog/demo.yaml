@@ -1,7 +1,5 @@
-name: demo
+name: "demo"
 kind: "container"
-registry: docker.io
-repository: nginx
+registry: "registry: docker.io"
+repository: "repository: nginx"
 port: 80
-baseEnv:
-  PORT: "80"
