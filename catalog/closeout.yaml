@@ -1,5 +1,0 @@
-name: "closeout"
-kind: "container"
-registry: "docker.io"
-repository: "nginx"
-port: 80

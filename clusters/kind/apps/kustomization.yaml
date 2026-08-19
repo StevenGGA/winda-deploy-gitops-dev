@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
   - "aa"
   - "cf-demo-08062330"
-  - "closeout"
   - "demo"
   - "manbo"
   - "privtest"
