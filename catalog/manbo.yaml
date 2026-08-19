@@ -3,5 +3,3 @@ kind: "container"
 registry: "ghcr.io"
 repository: "stevengga/steven-hello"
 port: 8080
-baseEnv:
-  "PORT": "8080"
