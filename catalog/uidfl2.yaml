@@ -1,7 +1,0 @@
-name: "uidfl2"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-instanceId: "fb2dd9048754c722"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
