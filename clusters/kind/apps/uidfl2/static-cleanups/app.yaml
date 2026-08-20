@@ -9,7 +9,7 @@ metadata:
         winda.ai/bucket: winda-deploy-static-local-dev
         winda.ai/cleanup-attempt: "1"
         winda.ai/cleanup-scope: app
-        winda.ai/cleanup-stage: awaiting-edge
+        winda.ai/cleanup-stage: removing
         winda.ai/cleanup-started-at: "2026-08-20T16:11:14Z"
         winda.ai/instance-id: 89734dd3b0ae3326
         winda.ai/prefix: uidfl2/89734dd3b0ae3326/
