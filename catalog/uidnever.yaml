@@ -1,0 +1,7 @@
+name: "uidnever"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+instanceId: "8164b7ce39e65175"
+staticSourceDir: "/usr/share/nginx/html"
+indexDocument: "index.html"
