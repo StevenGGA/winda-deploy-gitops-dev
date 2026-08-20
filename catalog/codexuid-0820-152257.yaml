@@ -1,0 +1,7 @@
+name: "codexuid-0820-152257"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+instanceId: "045a64196051f547"
+staticSourceDir: "/usr/share/nginx/html"
+indexDocument: "index.html"
