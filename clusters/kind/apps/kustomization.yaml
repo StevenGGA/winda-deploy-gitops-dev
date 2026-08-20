@@ -6,7 +6,6 @@ resources:
   - "demo"
   - "manbo"
   - "privtest"
-  - "probe-rt"
   - "sitedemo"
   - "staticbad"
   - "staticsite"

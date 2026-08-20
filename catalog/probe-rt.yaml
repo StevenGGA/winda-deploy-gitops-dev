@@ -1,7 +1,0 @@
-name: "probe-rt"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-instanceId: "74cf61289ae0bedf"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
