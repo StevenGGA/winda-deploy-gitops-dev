@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - "aa"
   - "cf-demo-08062330"
+  - "codexuid-0820-152257"
   - "demo"
   - "manbo"
   - "privtest"
