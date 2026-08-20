@@ -1,8 +1,0 @@
-apiVersion: winda.ai/v1alpha1
-kind: StaticPublicAccess
-metadata:
-    name: public
-spec:
-    env: dev
-    deployment: web
-    instanceId: 89734dd3b0ae3326
