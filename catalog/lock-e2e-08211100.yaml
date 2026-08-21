@@ -1,0 +1,7 @@
+name: "lock-e2e-08211100"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+instanceId: "28019bc2fe87125b"
+staticSourceDir: "/usr/share/nginx/html"
+indexDocument: "index.html"
