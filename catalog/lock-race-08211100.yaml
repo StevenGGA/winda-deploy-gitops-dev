@@ -1,7 +1,0 @@
-name: "lock-race-08211100"
-kind: "static"
-registry: "ghcr.io"
-repository: "stevengga/winda-static-demo"
-instanceId: "6ff397d6c53f3398"
-staticSourceDir: "/usr/share/nginx/html"
-indexDocument: "index.html"
