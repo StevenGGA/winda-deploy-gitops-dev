@@ -1,0 +1,5 @@
+name: "lock-putfinal-08211123"
+kind: "container"
+registry: "ghcr.io"
+repository: "winda-ai/lock-two"
+port: 8080
