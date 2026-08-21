@@ -1,0 +1,7 @@
+name: "lock-putrace3-08211100"
+kind: "static"
+registry: "ghcr.io"
+repository: "stevengga/winda-static-demo"
+instanceId: "48035c3a038531eb"
+staticSourceDir: "/usr/share/nginx/html"
+indexDocument: "index.html"
